@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLA Layout</title>
+    <style>
+        #container {
+            /* display: flex; */
+            width: 98vw;
+            height: 97vh;
+            /* border: 2px solid black; */
+            justify-content: center;
+            align-items: center;
+            margin:auto;
+            text-align:center
+        }
+
+        #Navbar {
+            display: flex;
+            width:100%;
+            height:74px;
+            /* border: 2px solid red; */
+            background-color:#172846;
+            color:white;
+            justify-content:flex-end;
+        }
+        .inner-block1{
+            width:200px;
+            /* border:2px solid green; */
+            display:flex;
+            justify-content:space-evenly;
+            align-items:center;
+            position: absolute;
+            left:20px;
+            margin-left:10px;
+        }
+        .inner-block{
+            margin:10px;
+            width : 120px;
+            /* border : 2px solid green; */
+            display:flex;
+            align-items:center;
+        }
+
+        .inn {
+            display: flex;
+            width: 90px;
+
+        }
+
+        .headings {
+            font-family: 'Playfair Display', Georgia, serif;
+            margin: 0px;
+            padding: 0px;
+            /* display:block; */
+        }
+        .anchor{
+            text-decoration:none;
+            font-size: 22px;
+            color:white;
+        }
+
+        #logo {
+            /* padding:5px; */
+            height: 70px;
+            width: 60px;
+        }
+        #heading{
+            display:inline-block;
+            color: rgb(248, 183, 62);
+        }
+        #head1{
+            display:flex;
+            color: green;
+
+        }
+        #camera{
+            padding-top: 10px;
+            height:50px;
+            width:50px;
+            color: blue;
+        }
+        #box{
+            display:flex;
+            /* text-align:center; */
+            justify-content: center;;
+            /* margin:auto; */
+            display:grid;
+            grid-template-rows: repeat(2,350px);
+            grid-template-columns: repeat(3,450px);
+            /* grid-column: auto; */
+            /* grid-template-columns:3; */
+        }
+        .inner-box{
+            display:inline-block;
+            /* grid: template areas 2px; */
+            margin:15px 25px;
+            border-radius:30px;
+            /* height:200px; */
+            /* width:260px; */
+            /* border:2px solid blue; */
+        }
+        .gal-image{
+            height:100%;
+            width:100%;
+            border-radius:35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <!--main box -->
+
+        <div id="Navbar">
+        <!-- navigation bar -->
+
+                <div  class="inner-block1">
+                  <div>
+                    <img id="logo"
+                        src="https://upload.wikimedia.org/wikipedia/en/4/42/GLA_University_logo.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original"
+                        alt="GLA Logo">
+                  </div>
+                  <div>
+                        <h1 class="headings">GLA</h1>
+                        <h3 class="headings">University</h3>
+                  </div>
+                </div>
+                <div class="inner-block">
+                    <a class="anchor" href="#home">Home </a>
+                </div>
+                <div class="inner-block">
+                     <a class="anchor" href="#gallery">Gallery</a>
+                </div>
+                <div class="inner-block">
+                     <a class="anchor" href="#about"> About</a>
+                </div>
+                
+        </div>
+        <br><br>
+        <div id="heading">
+            <div id="head1">
+                <h1  class="headings">Photo&nbsp;</h1>
+                <h1  class="headings  " id="heading">Gallery</h1>
+            </div>
+             <hr style="width:80px; display:inline-block; margin: 22px 0px ;">
+                <img id="camera" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhLt9gE2RtEj0PYVaNRzDSDOvy-tBNb8a7ky38s6WywQ&s=10" alt="camera">
+                 <hr style="width:80px; display:inline-block; margin: 22px 0px ;">
+        </div>
+        <div id="box">
+            <div class="inner-box">
+                <img class="gal-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlgYk2pJWDHzyZXRYTSzPmyLzJ9WrUHLFu4R1KH89DIA&s=10" alt="slum">
+            </div>
+            <div class="inner-box"> <img class="gal-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAggHTgeAvNDzfGVuG1nOktwqQVkohYiQduN_GgF2bJQ&s=10" alt="slum"></div>
+            <div class="inner-box"> <img class="gal-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE6jNeElqM4IlUbC6Lb6RIix1f6KmyCACpZ6kcCwlaxA&s=10" alt="slum"></div>
+            <div class="inner-box"> <img class="gal-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE6jNeElqM4IlUbC6Lb6RIix1f6KmyCACpZ6kcCwlaxA&s=10" alt="slum"></div>
+            <div class="inner-box"> <img class="gal-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3rKqrvy8Jsy17gGP0WK-u8TLvLOvKoK-7MA77P02FUA&s=10" alt="slum"></div>
+            <div class="inner-box"> <img class="gal-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6_UJjgI_CM7hNWL2OUq0KAw4KI1dfz8HFMa2CxxQBhA&s=10" alt="slum"></div>
+        </div>
+    </div>
+</body>
+
+</html>

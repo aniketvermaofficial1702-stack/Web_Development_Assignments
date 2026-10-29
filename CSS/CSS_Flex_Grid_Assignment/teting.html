@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Image Slider</title>
+
+    <style>
+
+        /* #slider{
+            width: 100%;
+            max-width: 70%;
+            height: 300px;
+            margin:80px auto;
+            overflow: hidden;
+        }
+
+        .slides{
+            display: flex;
+            width: 400%;
+            height: 100%;
+
+            animation: image-slider 22s ease-in-out infinite;
+        }
+
+        .slides img{
+            width: 25%;
+            height: 100%;
+            flex-shrink: 0;
+        }
+
+
+        @keyframes image-slider {
+            0%, 25%{
+                transform: translateX(0);
+            }
+
+            26%, 50%{
+                transform: translateX(-25%);
+            }
+
+            51%, 75%{
+                transform: translateX(-50%);
+            }
+
+            76%, 99%{
+                transform: translateX(-75%)
+            }
+
+            100%{
+                transform: translateX(0);
+            }
+        } */
+         #line{
+            display:inline;
+            width:20px;
+         }
+
+    </style>
+
+</head>
+<body>
+
+    <hr style="width:80px; display:inline-block; margin: 65px 0px ;"><img id="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAY1BMVEX///8AAADx8fEKCgr19fWFhYXKysp2dnYqKir6+vrPz88VFRVtbW3GxsZdXV1hYWGxsbG/v7+SkpIjIyPW1tbd3d07OztKSkrn5+erq6t8fHyYmJhSUlKhoaEzMzMcHBxCQkJhjYpfAAAE6ElEQVR4nO2a2ZbiIBCGyWZC9kSyITG+/1NOQTY1qDNtSJ85p76rhkj4G4qqopQQBEEQBEEQBEEQBEEQBEEQBEEQ5L8hcZ6wouS3NbmNtaFxf1lUp2Rc8omLana/LKqWIsTaFrJdHyqhq2+At3b0amWytSNVHf2Ronw1ZbC03fpZVKY66iOtqkuzLEvXleon0y7C00gxdRywVKHnT2SSueHz8/bojZy5r8ULd5LUildT/wTR7qHJ3VWTZaV72Fu5eW3difMl/rGq8ntN9Lp5a0+KmLTBQ18UDUMU/ZWoK/1alLt96y3Jgtxb242XMzURZbmnCTvPfL9/9ocZnDh0iZ1ceBzzS2ITl/nOhyH29yvFvXeULQnLux2+liFpy7dD+A6W7r5G/suheFoYR0hfZL8Z9r0m2wleEXmkHQ+hk5U9UGajqcct8aK7D54XZMv5fvve2BScQikiyhJ7OlDUTpSuqFgikKRuJuqdbOq1qI6o7ImzxwGMy97LlGmpdVx8ABWGRV2UW61V7uu2Rcl5WbTKXhK5IOUoWRn/+jbfrKhYLUUjI1nbL86p6VVHoxZydvqHiQpoaI1xzO2H+wdDL/tkWhXS2ekv5641u32FzO8aeL2dPT/KZG8jM705u6qzVJHdLJOiYgJh5gxbVd22D28V7CCkWh7RR21TohLZ3elvWOMKSouzT0eKuhI49ymdk3YraB5zBp8SCtvKSaAZbEpUb4NFFXD4xyav7Mp7+AA4CjCo2u40g02JaovxoI8e2lcfDJOOr0sJqwhhumiPEyVcLs2YTKdrdOnsGnfhsl2wjLB2XJtLmxHlkUFJ4feTMMgWRDXfbzh0gNMinma4GVEXAjG3na+iclXItGzx4ppc0kJoXmONcVFFBYtiL48EXT9XiGVmG/6sCs1wM6JOsDOZS6qp6XdlcZlWrZ+chFWpWMN0nsqMKDlVTKXRKMo7w/HmGxkjNB7lHyQqfBTl3V0NF4GTqPAwUcqmwJKnZpavj/I5PsM5SA+1qQ4ug1eYdboyDOFS6DiHUx7juOq66upcuik/ZUlLpnMSINik6szmwwe7K8/BgX4qk9G2I2sazpmAFRoEWwLN+FR98CBR5xYmbODZElVuRZHnRSGTK086hQAmhqyma3UVLEMBOYFw4rCHisxVCHVRjlXSclFh51wlutGGRAmisqUl0NyRyQqxrHly+be2tmUq82yl/4GlCrfVH9FYUajCsRVqMxdjojxZm24g5uW6pzlcO8GiUu3ZMyfKqVikUiqSbEw5kPdTkBOxSjfU4BVLqKREVqZZ+vgkhbuMqiRc9BZl8obcq/tTKbOWYq0GOUImV1SeyvihxnGMKOckzcYaK2CnPr5F0S3uT7Ilk2UwuNOrip7BAkfEqNy4oZiKYHSqrbiFDH8prYZXI02Wgq4VVRldmt+Ve2muTMynlfbKZ1yUPPr5OHXWhayqWNiNoS7I9a5iN1E0Ob2GkHZxRWsV3WvByl6TfF9HfysqSUJilw/1hKa04V76dtD3oj7V0bOEuKyP1TYGcc9ckujSlX2375MouV2ndi7EtqftVzkGRGm+BtkSiNjn3I/F9oscDTsU0vnnWf4N/r0mEn76quUfiXb5crR46Zp/wrDT7zsqb3j+7chPGbxqH00IgiAIgiAIgiAIgiAIgiAIgiDITvwB9AdHdfpiUEMAAAAASUVORK5CYII=" 
+    <div id="slider">
+        <hr style="width:80px; display:inline-block; margin: 65px 0px ;">
+        <div class="slides">
+            <img src="https://picsum.photos/seed/mountain/900/400" alt="Mountains">
+            <img src="https://picsum.photos/seed/ocean/900/400" alt="Ocean">
+            <img src="https://picsum.photos/seed/bike/900/400" alt="Random">
+            <img src="https://picsum.photos/seed/sky/900/400" alt="Random">
+        </div>
+    </div>
+</body>
+</html>
