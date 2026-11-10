@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyLab </title>
+    <style>
+        #main {
+            border: 3px solid black;
+            height: 98vh;
+            width: 96vw;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #nav {
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            height: 60px;
+            width: 99%;
+            /* border: 3px solid blue; */
+            /* margin: 6px; */
+            box-shadow: 0px 20px 19px -23px;
+        }
+
+        #logo {
+            display: flex;
+            /* background-color: blue; */
+            /* color-interpolation-filters: linearRGB auto; */
+            /* border: 2px solid blue; */
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            width: 120px;
+            font-size: 29px;
+            height: 58px;
+            align-items: center;
+            justify-content: center;
+            background:linear-gradient(-45deg, rgb(215, 84, 215),rgb(128, 128, 255));
+            /* background: -o-linear-gradient(red,blue); */
+        }
+        #navigations{
+            display:flex;
+            justify-content:space-evenly;
+             align-items: center;
+             /* border:2px solid yellow; */
+             width:500px;
+             height:58px;
+             /* margin:2px; */
+        }
+        .about{
+            display: flex;
+            /* flood-color:; */
+            /* border:2px solid red; */
+            text-decoration:none;
+            font-size:18px;
+            height:30px;
+            width:40px;
+            align-items: center;
+            justify-content: center;
+
+        }
+        #content{
+            margin:8px;
+            border:2px solid blue;
+            height:89%;
+            display:flex;
+            justify-content:space-between;
+        }
+        #bodies{
+            margin:15px;
+            height:97%;
+            width:52%;
+            /* border:2px solid red; */
+        }
+        #boxes{
+            display:grid;
+            grid-template-rows: repeat(2,313px);
+            grid-template-columns: repeat(2,310px);
+             margin:15px;
+            height:97%;
+            width:46%;
+            border:2px solid red;
+        }
+        #space{
+            height:50px;
+        }
+        #heading1{
+            font-size:20px;
+            color:rgb(72, 72, 255);
+            margin:0px;
+        }
+        heading2{
+             /* font-size:20px; */
+            color:rgb(72, 72, 255);
+            margin:0px;
+        }
+        #bodies > p {
+            width:75%;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color:grey;
+        }
+        #videos{
+            margin:0px; 
+            display:inline-block;
+            /* height:190px; */
+            width:680px;
+            display:flex;
+        }
+        #gg{
+            /* margin:170px 0px ; */
+            display:inline;
+            font-size:25px;
+            margin: 20px 30px;
+        }
+        .sub-box{
+            border:2px solid blue;
+            margin:15px;
+            box-shadow:2px 2px 37px -20px;
+            
+        }
+        img{
+            height:150px;
+            width:150px;
+            margin:0px 66px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+
+        <!-- Navigation Bar -->
+        <div id="nav">
+
+            <!-- logo -->
+            <div id="logo">StudyLab</div>
+
+            <!-- navigations -->
+            <div id="navigations">
+                <a class="about" href="#"><div >Home</div></a>
+                <a class="about" href="#"> <div>About</div></a>
+                <a class="about" href="#"><div>Course</div></a>
+                <a class="about" href="#"><div>Instructor</div></a>
+                <a class="about" href="#"> <div>Blog</div></a>
+                <a class="about" href="#"><div>Contact</div></a>
+            </div>
+
+        </div>
+
+        <!-- content-box -->
+         <div id="content">
+
+            <div id="bodies">
+                <div id="space"></div>
+                <div>
+                    <h1 id="heading1">WELCOME TO STUDYLABS</h1>
+                    <h1 id="heading2">We are StudyLab An Online Learning Centre</h1>
+                </div>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regellalia. It is a paradismatic country, in which roasted parts of sentences fly into your mouth. </p>
+                <p>Far far away, behind the vast mountains, far from the countries of Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean</p>
+
+                <!-- <a href=""></a> -->
+                <!-- <img src="" alt=""> -->
+                 <div id = "videos">
+                    <iframe   width="380" height="190" src="https://www.youtube.com/embed/GVizJ_jpUnw?si=_pjYiPFIN4su4JFG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                     <p id="gg">Learning anything from Studylabs</p>
+                </div>
+               
+                <!-- <iframe id = "videos" width="560" height="315" src="https://www.youtube.com/embed/GVizJ_jpUnw?si=_pjYiPFIN4su4JFG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 -->
+               
+            </div>
+
+            <!-- second box for bxes -->
+            <div id="boxes">
+
+                
+
+                <div class="sub-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaNwYDnFXRbawEquREQli-kNGQUZmvYMU33mo9K2yWtg&s=10" alt="form selection">
+                    <h2>Top Quality Content</h2>
+                    <p>A small river named Duden flows by their place and supplies</p>
+                </div>
+                <div class="sub-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbtc9soeTr48kL8R8uhlYeSCpugu0HXv2yw1epcblmcQ&s=10" alt="form">
+                    <h2>Highly Skilled Instr.</h2>
+                    <p>A small river named Duden flows by their place and supplies</p>
+                </div>
+                <div  class="sub-box">
+                    <img style="width:220px; margin:0px 30px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROZdi1O3nY8uhMTLGPSEioRr8rz5mTSJtD9X2Api8lSQ&s=10" alt="Quiz">
+                    <h2>World Class & Quiz</h2>
+                    <p>A small river named Duden flows by their place and supplies</p>
+                </div>
+                <div class="sub-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnbDSfphRZGjBAvl_-Wu6Yb11YS9_rjnz-UwIEtRUqDg&s=10" alt="certified">
+                    <h2>Get Certified</h2>
+                    <p>A small river named Duden flows by their place and supplies</p>
+                </div>
+            </div>
+         </div>
+
+
+    </div>
+</body>
+
+</html>

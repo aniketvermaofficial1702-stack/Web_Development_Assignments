@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout2</title>
+    <style>
+        #grid-part {
+            display: grid;
+            grid-template-rows: repeat(2, 100px);
+            grid-template-columns: repeat(4, 150px);
+            grid-gap:20px;
+        }
+        #st{
+            display:flex;
+            padding:20px;
+            justify-content:start;
+            align-items:center;
+            font-size:45px;
+            grid-area:1/1/2/3;
+            background-color:grey;
+            border-radius:18px;
+        }
+        #nd{
+            display:flex;
+            padding:20px;
+            justify-content:start;
+            align-items:center;
+            font-size:45px;
+            grid-area:1/3/3/4;
+            background-color:grey;
+             border-radius:18px;
+        }
+        #rd{
+            display:flex;
+            justify-content:start;
+            padding:20px;
+            align-items:center;
+            font-size:45px;
+            grid-area:2/1/3/2;
+            background-color:grey;
+             border-radius:18px;
+        }
+        #th{
+            display:flex;
+            justify-content:start;
+            padding:20px;
+            align-items:start;
+            font-size:45px;
+            grid-area:2/2/3/3;
+            background-color:grey;
+             border-radius:18px;
+        }
+        #fth{
+            display:flex;
+            justify-content:start;
+            align-items:center;
+            padding:20px;
+            font-size:45px;
+            grid-area:1/4/3/5;
+            background-color:grey;
+             border-radius:18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="grid-part">
+            <div id="st" >A</div>
+            <div id="nd" >B</div>
+            <div id="rd" >C</div>
+            <div id="th" >D</div>
+            <div id="fth" >E</div>
+        </div>
+    </div>
+</body>
+
+</html>
