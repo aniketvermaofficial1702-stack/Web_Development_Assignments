@@ -1,11 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Document</title>
+    <style>
+        #main {
+            /* display: flex; */
+            /* justify-content: center; */
+            text-align:center;
+            /* padding: 30px; */
+
+        }
+
+        /* navigation bar */
+        #nav {
+            width:99vw;
+            margin:20px 0px;
+            /* position:fixed; */
+            /* border: 2px solid red; */
+            height:30px;
+            /* align-content:center; */
+            /* text-align:center; */
+        }
+        #logo{
+            position:fixed;
+            height:36px;
+            /* border:2px solid green; */
+            text-align:center;
+            align-content:center;
+            font-size:34px;
+            left:40px;
+            /* background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1VRdAd6t4oNO7oE7pqR-P_zfqI6Imv8svBWDVY1R5Og&s=10) ; */
+            background:linear-gradient(-45deg,rgb(255, 221, 111),rgb(115, 252, 115));
+        }
+        #end{
+            position:fixed;
+            /* height: */
+            right:40px;
+            font-size:18px;
+             height:28px;
+            /* border:2px solid green; */
+            text-align:c    enter;
+            align-content:center;
+        }
+
+
+        /* slider */
+        #slider {
+            width: 99vw;
+            height: 300px;
+            /* border: 2px solid blue; */
+            overflow: hidden;
+
+        }
+
+        #slides {
+            height: 99.0%;
+            width: 400%;
+            /* border: 3px solid red; */
+            animation: slideshow 16s ease-in-out infinite;
+            display: flex;
+        }
+
+        img {
+            height: 100%;
+            width: 25%;
+            display: flex;
+        }
+
+        @keyframes slideshow {
+
+            0%,
+            23% {
+                transform: translateX(0);
+            }
+
+            26%,
+            49% {
+                transform: translateX(-25%);
+            }
+
+            52%,
+            74% {
+                transform: translateX(-50%);
+            }
+
+            77%,
+            96% {
+                transform: translateX(-75%);
+            }
+
+            /* 76%,99%{
+                transform:translateX(-100%);
+            } */
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        #heading-box1 {
+            /* display:flex; */
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            /* width:180px; */
+            color: white;
+            font-size: 30px;
+            position: fixed;
+            left: 8%;
+            top: 30%;
+            animation: entry 1.2s ease-out both;
+        }
+
+        @keyframes entry {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #heading-box2 {
+            /* display:flex; */
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            /* width:180px; */
+            color: white;
+            font-size: 30px;
+            position: fixed;
+            left: 33%;
+            top: 30%;
+        }
+
+        #heading-box3 {
+            /* display:flex; */
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            /* width:180px; */
+            color: white;
+            font-size: 30px;
+            position: fixed;
+            left: 58%;
+            top: 30%;
+        }
+
+        #heading-box4 {
+            /* display:flex; */
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            /* width:180px; */
+            color: white;
+            font-size: 30px;
+            position: fixed;
+            left: 83%;
+            top: 30%;
+        }
+
+        #heading {
+            margin: 0px;
+            margin-bottom: 10px;
+            padding: 0px;
+        }
+
+        #link-box {
+            box-shadow: 0px 0px 8px 3px;
+            width: 220px;
+            height: 50px;
+            background-color: rgb(254, 4, 4);
+            text-align: center;
+            align-content: center;
+            display: inline-block;
+            border-radius: 15px;
+            opacity: 70%;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+
+        }
+        #flaot{
+            margin:20px;
+            border-radius:20px;
+            display:inline-block;
+            height:300px;
+            width:230px;
+            box-shadow:2px 3px 15px -5px;
+            text-align:center;
+            animation : floater 3s ease-in-out infinite;
+        }
+        @keyframes floater{
+            0%,3%{
+                transform:translateY(0);
+            }
+            50%,53%{
+                transform:translateY(10px);
+            }
+            100%{
+                transform:translateY(0);
+            }
+            
+        }
+        #loader{
+            
+            /* margin:20px 0px; */
+            display:inline-block;
+            height:50px;
+            width:50px;
+            border:3px solid blue;
+            border-bottom:white;
+            border-radius:50%;
+            animation: loading 1.4s linear infinite;
+            text-align:center;
+            align-content:center;
+
+        }
+        #loader2{
+            /* margin:20px 0px; */
+            display:inline-block;
+            height:25px;
+            width:40px;
+            border:3px solid blue;
+            border-bottom:white;
+            border-radius:50%;
+            animation: loading 2.8s linear infinite;
+
+        }
+        /* #loader2{
+            margin:20px 0px;
+            display:inline-block;
+            height:25px;
+            width:40px;
+            border:3px solid blue;
+            border-top:green;
+            border-radius:50%;
+            animation: loading 2.8s linear infinite;
+
+        } */
+        @keyframes loading{
+            0%{
+                transform:rotate(0deg);
+            }
+            50%{
+                transform:rotate(360deg) scale(1.3);
+                border:3px solid red;
+                 border-bottom:white;
+            }
+            100%{
+                transform:rotate(720deg);
+                border:3px solid yellow;
+                 border-bottom:white;
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <div id="nav">
+        <div id="logo"><b>AniketX</b></div>
+        <div id="end">Forget CSS Animation</div>
+    </div>
+    <div id="main">
+
+        <div id="slider">
+            <div id="slides">
+                <div id="heading-box1">
+                    <h1 id="heading">Explore The World</h1>
+                    <h2 id="heading">Bring Your Websites to Life</h2>
+                    <a id="link-box"  href="https://venge.io/#ACDC3A">
+                        <div> Discover More</div>
+                    </a>
+
+                </div>
+                <div id="heading-box2">
+                    <h1 id="heading">Explore The World</h1>
+                    <h2 id="heading">Bring Your Websites to Life</h2>
+                    <a id="link-box" href="https://venge.io/#ACDC3A">
+                        <div> Discover More</div>
+                    </a>
+
+                </div>
+                <div id="heading-box3">
+                    <h1 id="heading">Explore The World</h1>
+                    <h2 id="heading">Bring Your Websites to Life</h2>
+                    <a id="link-box" href="https://venge.io/#ACDC3A">
+                        <div> Discover More</div>
+                    </a>
+
+                </div>
+                <div id="heading-box4">
+                    <h1 id="heading">Explore The World</h1>
+                    <h2 id="heading">Bring Your Websites to Life</h2>
+                    <a id="link-box" href="https://venge.io/#ACDC3A">
+                        <div> Discover More</div>
+                    </a>
+
+                </div>
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkQDwv2tcRDoxK6PdNLhbopm52ze9x4bCgzkQy7f_5u2bhzJz8lQXPV74&s=10"
+                    alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRypnQFyaW97supcaeZqXj_GT910Zg7op24sciv4QnIEg&s=10"
+                    alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoQ5XR9XrDsoEciHMNyA4_qY3XClvZZeLCApY4ny9hmw&s=10"
+                    alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1VRdAd6t4oNO7oE7pqR-P_zfqI6Imv8svBWDVY1R5Og&s=10"
+                    alt="">
+            </div>
+        </div>
+         <div id="flaot">
+            <h1 id="heading">CSS Animation</h1>
+            <h3 id="heading">Watch this card gently float up and down.</h3>
+            <div id="loader">
+                <div id="loader2"></div>
+            </div>
+            
+            <p>loading...</p>
+        </div>
+       
+    </div>
     
 </body>
+
 </html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3rd CSS layout</title>
+</head>
+<style>
+    #background {
+        background: #080d25;
+        margin: 0px -8px;
+    }
+
+    #main {
+        margin: -8px;
+        height: 100vh;
+        width: 100vw;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        /* colo */
+        /* background: rgb(12, 6, 43); */
+
+        text-align: center;
+        align-content: center;
+
+
+    }
+
+    #content {
+        height:50vh;
+        animation: entry 0.9s ease-in-out 1;
+    }
+
+    @keyframes entry {
+        0% {
+            transform: translateY(10px);
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        /* 0%{
+            transform: translateY(-20px);
+
+        } */
+    }
+
+    #glow1 {
+        height: 400px;
+        width: 400px;
+        background: #5725ed;
+        opacity: 0.5;
+        filter: blur(190px);
+        position: fixed;
+        top: -100px;
+        left: -100px;
+        /* flood-opacity: 80%; */
+    }
+
+    #glow2 {
+        height: 400px;
+        width: 400px;
+        background: #5725ed;
+        opacity: 0.5;
+        filter: blur(190px);
+        position: fixed;
+        bottom: -100px;
+        right: -100px;
+        /* flood-opacity: 80%; */
+    }
+
+    #loader {
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        border: 7px solid #243065;
+        border-right: 7px solid #1be8ff;
+        border-bottom: 7px solid #a30ef9;
+        border-radius: 50%;
+        animation: loading 1s linear infinite;
+    }
+
+    @keyframes loading {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    #text-load {
+        margin: 15px;
+        display: inline-block;
+        font-size: 48px;
+
+        animation: trans 1.5s linear infinite;
+    }
+
+    @keyframes trans {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    #dot-load {
+        margin: -40px 0px;
+        display: inline-block;
+        /* display:flex; */
+    }
+
+    #dot-load>#dot:nth-child(2) {
+        color: red;
+        animation-delay: 0.2s;
+    }
+
+    #dot-load>#dot:nth-child(1) {
+        color: yellow;
+        animation-delay: 0s;
+    }
+
+    #dot-load>#dot:nth-child(3) {
+        color: rgb(252, 30, 252);
+        animation-delay: 0.4s;
+    }
+
+    #dot-load>#dot:nth-child(4) {
+        color: rgb(252, 178, 30);
+        animation-delay: 0.6s;
+    }
+
+    #dot-load>#dot:nth-child(5) {
+        color: rgb(10, 18, 242);
+        animation-delay: 0.8s;
+    }
+
+    #para {
+        display: inline-block;
+    }
+
+    #dot {
+        margin: 0px -5px;
+        display: inline-block;
+        font-size: 85px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        /* animation:jump 1s ease-in-out infinite; */
+        animation: jump 1.5s ease-in-out infinite;
+        /* animation: 1s ease-in-out infinite; */
+    }
+
+    @keyframes jump {
+
+        0%,
+        3% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        50%,
+        53% {
+            transform: translateY(-8px);
+            opacity: 0.45;
+        }
+
+        98%,
+        100% {
+            transform: translateY(0);
+            /* opacity:0.2; */
+        }
+
+        /* 0%,3%{
+            transform: translateY(0);
+        }
+        0%,3%{
+            transform: translateY(0);
+        } */
+    }
+
+    #bar {
+        margin: 35px;
+        display: inline-block;
+        width: 270px;
+        height: 7px;
+        border-radius: 5px;
+        overflow: hidden;
+
+    }
+
+    #loading-bar {
+        /* margin:25px; */
+        display: flex;
+        height: 7px;
+        width: 270px;
+        /* border:1px solid red; */
+        background: linear-gradient(90deg, rgb(0, 251, 255), rgb(4, 0, 249));
+        box-shadow: 0px 0px 20px 15px;
+        border-radius: 5px;
+        background: blank;
+        animation: full 3s ease-in-out infinite;
+    }
+
+    @keyframes full {
+
+        0%,
+        3% {
+            width: 0px;
+        }
+
+        /* 50%{
+            width:135px;
+        } */
+        97%,
+        100% {
+            width: 270px;
+
+            /* transform: linear-gradient(cyan,rgb(167, 24, 167)); */
+        }
+    }
+</style>
+
+<body>
+    <div id="background">
+        <div id="glow1"></div>
+        <div id="glow2"></div>
+        <div id="main">
+            <div id="content">
+
+                <div id="loader"></div>
+                <br>
+                <div id="text-load">Loading...</div>
+                <br>
+                <p id-="para">Please wait while we load your experience</p>
+                <div id="dot-load">
+                    <div id="dot">.</div>
+                    <div id="dot">.</div>
+                    <div id="dot">.</div>
+                    <div id="dot">.</div>
+                    <div id="dot">.</div>
+                </div>
+                <br>
+                <div id="bar">
+                    <div id="loading-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
