@@ -3,9 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4th CSS Layout</title>
+    <title>Spice & Slice | Restaurant</title>
+    <style>
+        #nav{
+            display:flex;
+            justify-content:end;
+            align-items:center;
+            height:65px;
+            width:100vw;
+            margin:0px -8px;
+           /* padding:0px -50px; */
+
+            /* background-color: green; */
+            /* color:white; */
+        }
+        .navi{
+            font-size:30px;
+            margin:0px 38px;
+            
+        }
+        #logo{
+            position:fixed;
+            left:10px;
+            color:rgb(133, 2, 2);
+        }
+        #logo-img{
+            margin:-5px 5px;
+            height:30px;
+        }
+        #image{
+            display:flex;
+            margin:10px -8px;
+            /* padding:-5px; */
+            overflow:hidden;
+            width:100vw;
+            height:55vh;
+            justify-content:center;
+            background-color: black;;
+             /* background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb0DlyPhVdxPcB6lhilyxZ0YiUlH2wy8ySKganMmgW&s); */
+             /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb0DlyPhVdxPcB6lhilyxZ0YiUlH2wy8ySKganMmgW&s) ; */
+             /* background-clip: url(https://youtu.be/GVizJ_jpUnw?si=QTMz1vEnoBTtlVRp); */
+
+        }
+        #pizza-back{
+            width:100vw;
+            position:fixed;
+            height:55vh;
+            opacity:0.5;
+            
+        }
+        .heading{
+            /* display:inline-block; */
+           
+            margin:10px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:white;
+        }
+        #heading1{
+             position:fixed;
+            font-size: 70px;
+            top:150px;
+            left:460px;
+        }
+        #heading2{
+             position:fixed;
+            font-size: 70px;
+            top:236px;
+        }
+        #heading3{
+             position:fixed;
+            /* margin:-15px; */
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            top:330px;
+        }
+        #heart{
+            
+             display:inline-block;
+            position:fixed;
+            height:65px;
+            top:168px;
+            left:965px;
+        }
+        #link-box{
+            display:flex;
+            align-content:center;
+            align-items:center;
+            justify-content:center;
+            position:fixed;
+            top:400px;
+            left:613px;
+            background-color: rgb(255, 115, 0);
+            color:white;
+            border-radius:24px;
+            font-size:25px;
+            height:40px;
+            width:190px;
+            padding:4px 10px;
+        }
+        #menu{
+            /* display:flex; */
+            /* justify-content:center; */
+            text-align: center;
+            margin:40px 0px;
+        }
+        #heading4{
+            font-size:45px;
+            color:black;
+        }
+        #heading5{
+            color:rgb(102, 102, 102);
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="main">
+        <div id="nav">
+            <div class="navi" id="logo"><img id="logo-img" src="https://cdn-icons-png.flaticon.com/128/3595/3595455.png" alt="pizza-logo"><b>Spice & Slice</b></div>
+            <div class="navi" id="home">Home</div>
+            <div class="navi" id="menu">Menu</div>
+        </div>
+        <div id="image">
+            <img id="pizza-back" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb0DlyPhVdxPcB6lhilyxZ0YiUlH2wy8ySKganMmgW&s" alt="pizzu">  
+            <img src="https://cdn-icons-png.flaticon.com/128/17069/17069463.png" alt="hh" id="heart">  
+            <h1 class="heading" id="heading1">Delicious Food,</h1>
+            <h1 class="heading" id="heading2">Happy Moments</h1>
+            <div class="heading" id="heading3" >Fresh Ingredients. Amazing flavours. Made with Love.</div>
+            <a href="#"><div id="link-box">Explore Our Menu</div></a>
+        </div>
+        <div id="menu">
+            <h1 class="heading" id="heading4">Our Special Menu</h1>
+            <h3 class="heading" id="heading5">Discover some of our Customer's Favourites</h3>
+        </div>
+    </div>
 </body>
 </html>
